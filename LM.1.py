@@ -22,7 +22,7 @@ from groq import Groq
 from PIL import Image
 
 # Initialize the Groq client
-client = Groq(api_key='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')
+client = Groq(api_key='')
 
 def extract_text_from_pdf(file):
     doc = fitz.open(stream=file.read(), filetype="pdf")  # Open PDF from file object
