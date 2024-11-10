@@ -1,3 +1,21 @@
+Using FaceBook's Llama model to summarise and question an Research Articles(pdf's)
+
+1. Agenda:
+Libraries we need>>
+Loading the pdf
+Testing the API
+Summarize funtion
+Question Answering function
+Putting it all together in a Streamlit app
+># pip install groq pymupdf
+># pip install streamlit 
+># pip install streamlit pymupdf groq
+># pip install groq
+
+Putting it all together
+Code Begins from Here>>
+
+
 import streamlit as st
 import fitz  # PyMuPDF
 from groq import Groq
