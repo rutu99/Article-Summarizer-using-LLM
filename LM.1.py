@@ -1,3 +1,4 @@
+"""
 Using FaceBook's Llama model to summarise and question an Research Articles(pdf's)
 
 1. Agenda:
@@ -13,8 +14,9 @@ Putting it all together in a Streamlit app
 ># pip install groq
 
 Putting it all together
-Code Begins from Here>>
+Code Begins from Here>>*
 
+"""
 
 import streamlit as st
 import fitz  # PyMuPDF
