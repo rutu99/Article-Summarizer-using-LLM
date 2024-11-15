@@ -14,17 +14,25 @@ Putting it all together in a Streamlit app
 ># pip install groq
 
 Putting it all together
+generate the API key frmo Groq API
 Code Begins from Here>>*
 
 """
-
 import streamlit as st
 import fitz  # PyMuPDF
 from groq import Groq
 from PIL import Image
 
 # Initialize the Groq client
-client = Groq(api_key='')
+client = Groq(api_key='your API key here')
+
+# Page Configuration
+st.set_page_config(page_title="Article Summarizer", page_icon="📰", layout="wide")
+
+# Display the image at the top
+image_path = "C:/Users/rutuk/Desktop/proj/sum.jpg"  # Update with your image path
+image = Image.open(image_path)
+st.image(image, use_column_width=True, caption="Welcome to AI SUMMARIZER")
 
 def extract_text_from_pdf(file):
     doc = fitz.open(stream=file.read(), filetype="pdf")  # Open PDF from file object
@@ -32,6 +40,7 @@ def extract_text_from_pdf(file):
     for page in doc:
         text += page.get_text()
     return text
+
 
 def summarize_text(text):
     try:
@@ -59,10 +68,6 @@ def ask_question(context, question):
     except Exception as e:
         return f"An error occurred: {e}"
 
-# Streamlit UI
-st.set_page_config(page_title="Article Summarizer", page_icon="📰", layout="wide")
-
-# Header Section with Styling
 # Header Section with Styling
 st.markdown("""
     <style>
@@ -120,3 +125,4 @@ st.markdown("""
     </style>
     <div class="footer">Article Summarizer - Powered by Streamlit . Developed by RVP</div>
 """, unsafe_allow_html=True)
+
