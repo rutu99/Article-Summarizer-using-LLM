@@ -30,7 +30,7 @@ client = Groq(api_key='your API key here')
 st.set_page_config(page_title="Article Summarizer", page_icon="📰", layout="wide")
 
 # Display the image at the top
-image_path = "C:/Users/rutuk/Desktop/proj/sum.jpg"  # Update with your image path
+image_path = "./sum.jpg"  # Update with your image path
 image = Image.open(image_path)
 st.image(image, use_column_width=True, caption="Welcome to AI SUMMARIZER")
 

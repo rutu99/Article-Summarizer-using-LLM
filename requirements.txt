@@ -1,0 +1,4 @@
+groq==0.13.1
+pillow==10.4.0
+PyMuPDF==1.25.1
+streamlit==1.41.1
